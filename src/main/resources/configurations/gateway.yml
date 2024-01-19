@@ -13,15 +13,15 @@ spring:
           enabled: true
       routes:
         - id: blog
-          uri: http://localhost:8090
+          uri: http://blog-service:8090
           predicates:
             - Path=/api/blogs/**
         - id: social
-          uri: http://localhost:8070
+          uri: http://social-service:8070
           predicates:
             - Path=/api/social/**
         - id: auth
-          uri: http://localhost:8060
+          uri: http://auth-service:8060
           predicates:
             - Path=/api/auth/**
       globalcors:

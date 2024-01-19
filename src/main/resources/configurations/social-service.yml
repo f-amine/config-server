@@ -3,7 +3,7 @@ eureka:
     hostname: localhost
   client:
     service-url:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://discovery:8761/eureka
 
 server:
   port: 8070
@@ -12,7 +12,7 @@ spring:
     name: social-service
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/social
+    url: jdbc:postgresql://postgresql:5432/social
     username: postgres
     password: root
   jpa:
@@ -23,7 +23,7 @@ spring:
 
 application:
   config:
-    blog-url: http://localhost:8222/api/blogs
+    blog-url: http://gateway:8222/api/blogs
   security:
     jwt:
       secretKey: P4inmZExW3eMSf+dbS0VaDRaRK/Iu7ZTWiCCOyNwnbQGhB4JS5oPdxELOns7YeU
